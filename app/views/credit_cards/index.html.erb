@@ -1,0 +1,30 @@
+<div class="row mx-md-n5">
+  <div class="col px-md-5">
+    <div class="row">
+      <div class="col-sm-offset-3">
+        <h1>Credit Cards</h1>
+        <%= link_to 'Apply credit card', new_credit_card_path %>
+      </div>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Credit Limit</th>
+          <th>System Recommedation</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @credit_cards.each do |credit_card| %>
+          <tr>
+            <td><%= credit_card.email%></td>
+            <td><%= credit_card.credit_limit %></td>
+            <td><%= credit_card.status %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
