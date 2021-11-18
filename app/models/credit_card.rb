@@ -50,6 +50,8 @@ class CreditCard < ApplicationRecord
   			18
   		elsif emi >= 20001
   			24
+  		else 
+  			0
   		end
   	)
   end
